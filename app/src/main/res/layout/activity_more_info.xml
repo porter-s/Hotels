@@ -1,0 +1,127 @@
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ru.example.user.hotels.MoreInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ami_rl_Hat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:id="@+id/ami_rl_ImageHotel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/ami_ImageHotel"
+                    android:layout_alignParentStart="true" />
+
+                <ProgressBar
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ami_pbImageHotel"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_toRightOf="@+id/ami_rl_ImageHotel"
+                android:layout_alignParentTop="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/name_hotels"
+                android:id="@+id/ami_tName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_toRightOf="@+id/ami_rl_ImageHotel"
+                android:layout_below="@+id/ami_tName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/address"
+                android:id="@+id/ami_tAddress" />
+
+            <TextView
+                android:layout_toRightOf="@+id/ami_rl_ImageHotel"
+                android:layout_below="@+id/ami_tAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/distance"
+                android:id="@+id/ami_tDistance" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@+id/ami_rl_Hat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/suites_availability"
+            android:id="@+id/ami_tSuites_availability" />
+
+        <TextView
+            android:layout_below="@+id/ami_tSuites_availability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lat"
+            android:id="@+id/ami_tLat" />
+
+        <TextView
+            android:layout_below="@+id/ami_tLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lon"
+            android:id="@+id/ami_tLon" />
+
+        <RatingBar
+            android:layout_below="@+id/ami_tLon"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:id="@+id/ami_rbStars"
+            android:numStars="5" />
+
+        <FrameLayout
+            android:layout_below="@+id/ami_rbStars"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <fragment
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:name="android.webkit.WebViewFragment"
+                android:hardwareAccelerated="false"
+                android:id="@+id/ami_webMap"
+                android:layout_gravity="center" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ami_pbLoadInfo"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

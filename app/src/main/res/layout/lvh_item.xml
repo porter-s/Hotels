@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Название отеля"
+        android:textColor="#000"
+        android:id="@+id/lvh_item_tName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Адрес"
+        android:textColor="#000"
+        android:id="@+id/lvh_item_tAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/distance"
+        android:textColor="#000"
+        android:id="@+id/lvh_item_tDistance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/numb_free_places"
+        android:textColor="#000"
+        android:id="@+id/lvh_item_tNumbFreePlaces" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvh_item_rbStars"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:numStars="5"
+        android:rating="0"
+        android:longClickable="false"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
